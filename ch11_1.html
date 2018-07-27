@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>미끄러지는 요소</title>
+  <link rel="stylesheet" href="css/ch11.css">
+</head>
+
+<body>
+  <button id="make_visible">나무늘보를 보여주세요</button>
+  <button id="make_invisible">나무늘보를 감추세요</button>
+  <br>
+  <img id="dramatic" src="img/slow_loris_1.jpg" alt="loris 1" width="100" height="117">
+
+  <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  <script>
+    var btn = $("button#make_visible");
+    btn.on("click", function() {
+      //      alert("버튼 클릭됨");
+      var img = $("img#dramatic");
+      img.slideDown(1000);
+    });
+    var btnInv = $("button#make_invisible");
+    btnInv.on("click", function() {
+      //      alert("버튼 클릭됨");
+      var img = $("img#dramatic");
+      img.slideUp(3000);
+    });
+
+  </script>
+</body>
+
+</html>
